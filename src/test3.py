@@ -1,5 +1,2 @@
-from github import Github 
-
-token = ""
-gh = Github()
-gh.get_user("jackfu13")
+import subprocess
+x = subprocess.run(['C:\Program Files\Git\\bin\\bash.exe','src//test.sh'])
