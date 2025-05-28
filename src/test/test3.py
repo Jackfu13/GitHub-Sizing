@@ -1,6 +1,7 @@
 import requests
 import os
 import json
+import certifi
  # Retrieve token from environment variable
 token = os.environ.get("")
     
@@ -14,7 +15,7 @@ if response.status_code == 200:
 
     for repo in repos:
     
-        response2 = requests.get(f"https://api.github.com/repos/{repo["owner"]["login"]}/{repo["name"]}/collaborators",headers = headers)
+        response2 = requests.get(f"https://api.github.com/repos/{repo["owner"]["login"]}/{repo["name"]}/collaborators",headers = headers, verify=certifi.where())
         clist = []
         if response.status_code==200:
             collaborators = response2.json()
@@ -23,6 +24,7 @@ if response.status_code == 200:
         else:
             print(f"Error: {response2.status_code}")
             print(response2.text)
+            exit()
             
         reps = {}
         reps["name"] = repo["name"]
