@@ -30,7 +30,7 @@ if response.status_code == 200:
         reps["size"] = repo["size"]
         reps["collaborators"] = clist
         filter.append(reps)
-    with open('src//data.json', 'w') as file:
+    with open('output//data.json', 'w') as file:
         json.dump(filter, file, indent=4)
     
 else:
