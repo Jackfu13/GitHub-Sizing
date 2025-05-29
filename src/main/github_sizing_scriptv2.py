@@ -3,9 +3,9 @@ import os
 import json
 import certifi
  # Retrieve token from environment variable
-token = os.environ.get("")
+token = input("Please enter your PAT token: ")
     
-headers = {'Authorization': f'token <token>'}
+headers = {'Authorization': f'token {token}'}
 response = requests.get('https://api.github.com/user/repos', headers=headers)
 
 filter = []
