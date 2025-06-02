@@ -15,7 +15,7 @@ if response.status_code == 200:
     with open('rawdata.json', 'w') as file:
         json.dump(repos, file, indent=4)
     print("Saved to rawdata.json")
-    answer =  input("Filter data(name,size,owner)? Y or N, No is default")
+    answer =  input("Filter data to only include relevant fields(name,size,owner,collaborators)? Y or N, No is default")
     if answer.lower()=="y":
         filter = []
         for repo in repos:
