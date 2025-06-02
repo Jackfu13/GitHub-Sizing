@@ -14,7 +14,7 @@ response = requests.get(url, headers=headers)
 if response.status_code == 200:
     
     repos = response.json()
-    with open('filterdata.json', 'w') as file:
+    with open('data.json', 'w') as file:
         json.dump(repos, file, indent=4)
     print("json saved to data.json")
 else:
