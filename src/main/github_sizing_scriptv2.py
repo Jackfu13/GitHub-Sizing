@@ -23,7 +23,7 @@ if response.status_code == 200:
         filter.append(reps)
     with open('filterdata.json', 'w') as file:
         json.dump(filter, file, indent=4)
-    print("json saved to data.json")
+    print("json saved to filterdata.json")
 else:
         print(f"Error: {response.status_code}")
         print(response.text)
