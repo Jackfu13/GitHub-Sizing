@@ -6,7 +6,7 @@ import certifi
 token = input("Enter your PAT token: ")
 url = input("Enter the API endpoint url: ")
 headers = {'Authorization': f'token {token}'}
-response = requests.get(url, headers=headers)
+response = requests.get(url, headers=headers,verify=False)
 
 
 
