@@ -1,0 +1,87 @@
+[
+    {
+        "repoName": "Fundies2FinalProject",
+        "collaborators": [
+            {
+                "username": "itaischwarz",
+                "id": 174662857
+            },
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            },
+            {
+                "username": "hriday0413",
+                "id": 205782958
+            }
+        ],
+        "owner": "itaischwarz",
+        "size": 178
+    },
+    {
+        "repoName": "ae3finalproject",
+        "collaborators": [
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            }
+        ],
+        "owner": "Jackfu13",
+        "size": 0
+    },
+    {
+        "repoName": "Blockchain-Ballots",
+        "collaborators": [
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            }
+        ],
+        "owner": "Jackfu13",
+        "size": 67053
+    },
+    {
+        "repoName": "Elevator-Simulation",
+        "collaborators": [
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            }
+        ],
+        "owner": "Jackfu13",
+        "size": 431
+    },
+    {
+        "repoName": "Expression-Evaluator",
+        "collaborators": [
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            }
+        ],
+        "owner": "Jackfu13",
+        "size": 13
+    },
+    {
+        "repoName": "GitHub-Sizing",
+        "collaborators": [
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            }
+        ],
+        "owner": "Jackfu13",
+        "size": 1282
+    },
+    {
+        "repoName": "Special-Olympics-app",
+        "collaborators": [
+            {
+                "username": "Jackfu13",
+                "id": 181529133
+            }
+        ],
+        "owner": "Jackfu13",
+        "size": 328
+    }
+]

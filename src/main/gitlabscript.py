@@ -5,7 +5,8 @@ import certifi
  # Retrieve token from environment variable
  #token = input("Enter your PAT token: ")
 #url = input("Enter the API endpoint url: ")
-
+#
+#https://gitlab.com/api/v4/projects
 token = input("Please enter your Personal Access Token: ")
 url = input("Please enter the API endpoint: ")
 headers = {'PRIVATE-TOKEN': f'{token}'}
@@ -21,11 +22,27 @@ if response.status_code == 200:
     statList = []
     for repo in data:
         dict = {}
-        dict["id"] = repo["id"]
-        dict["projectName"] = repo["name"]
-        dict["owner"] = repo["namespace"]["name"]
-        dict["statistics"] = repo["statistics"]
-        statList.append(dict)
+        newUrl = f'https://gitlab.com/api/v4/projects/{repo["id"]}/members'
+        response = requests.get(newUrl, headers=headers,verify=False)
+        if response.status_code==200:
+            members = response.json()
+            memberList = []
+            for member in members:
+                newDict = {}
+                newDict["id"] = member["id"]
+                newDict["username"] = member["username"]
+                memberList.append(newDict)
+            dict["members"] = memberList
+            dict["id"] = repo["id"]
+            dict["project_name"] = repo["name"]
+            dict["owner"] = repo["namespace"]["name"]
+            dict["storage_size"] = repo["statistics"]["storage_size"]/1000
+            dict["repository_size"] = repo["statistics"]["repository_size"]/1000
+            statList.append(dict)
+        else:
+            quit()
+
+        
 
     with open('gitlabdata.json', 'w') as file:
         json.dump(statList, file, indent=4)

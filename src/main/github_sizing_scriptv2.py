@@ -17,11 +17,26 @@ if response.status_code == 200:
     print("Saved to rawgithubdata.json")
     filter = []
     for repo in repos:
-        reps = {}
-        reps["name"] = repo["name"]
-        reps["owner"] = repo["owner"]["login"]
-        reps["size"] = repo["size"]
-        filter.append(reps)
+        url = f'https://api.github.com/repos/{repo["owner"]["login"]}/{repo["name"]}/collaborators'
+        response = requests.get(url,verify=False,headers = headers)
+        
+        if response.status_code==200:
+            collab = response.json()
+            cl = []
+            for collaborators in collab:
+                 dicts = {}
+                 dicts["username"] = collaborators["login"]
+                 dicts["id"] = collaborators["id"]
+                 cl.append(dicts)
+            reps = {}
+            reps["repo_name"] = repo["name"]
+            reps["collaborators"] = cl
+            reps["owner"] = repo["owner"]["login"]
+            reps["size"] = repo["size"]
+            filter.append(reps)
+        else:
+            print(f"Error: {response.status_code}")
+            print(response.text)
     with open('githubdata.json', 'w') as file:
         json.dump(filter, file, indent=4)
     print("saved to githubdata.json")

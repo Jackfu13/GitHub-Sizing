@@ -1,38 +1,49 @@
 [
     {
-        "id": 70748447,
-        "projectName": "Expression-Evaluator",
+        "members": [
+            {
+                "id": 28416617,
+                "username": "Jackfu13"
+            }
+        ],
+        "id": 70750500,
+        "project_name": "testproject",
         "owner": "Jackfu13",
-        "statistics": {
-            "commit_count": 16,
-            "storage_size": 13981,
-            "repository_size": 13981,
-            "wiki_size": 0,
-            "lfs_objects_size": 0,
-            "job_artifacts_size": 0,
-            "pipeline_artifacts_size": 0,
-            "packages_size": 0,
-            "snippets_size": 0,
-            "uploads_size": 0,
-            "container_registry_size": 0
-        }
+        "storage_size": 3.882,
+        "repository_size": 3.882
     },
     {
+        "members": [
+            {
+                "id": 28416617,
+                "username": "Jackfu13"
+            }
+        ],
+        "id": 70750304,
+        "project_name": "Elevator-Simulation",
+        "owner": "Jackfu13",
+        "storage_size": 442.014,
+        "repository_size": 442.014
+    },
+    {
+        "members": [
+            {
+                "id": 28416617,
+                "username": "Jackfu13"
+            }
+        ],
+        "id": 70748447,
+        "project_name": "Expression-Evaluator",
+        "owner": "Jackfu13",
+        "storage_size": 13.981,
+        "repository_size": 13.981
+    },
+    {
+        "members": [],
         "id": 70717085,
-        "projectName": "Jackfu13-project",
+        "project_name": "Jackfu13-project",
         "owner": "Jackfu13-group",
-        "statistics": {
-            "commit_count": 4,
-            "storage_size": 10865,
-            "repository_size": 10865,
-            "wiki_size": 0,
-            "lfs_objects_size": 0,
-            "job_artifacts_size": 0,
-            "pipeline_artifacts_size": 0,
-            "packages_size": 0,
-            "snippets_size": 0,
-            "uploads_size": 0,
-            "container_registry_size": 0
-        }
+        "storage_size": 10.865,
+        "repository_size": 10.865
     }
 ]
