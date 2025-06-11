@@ -5,7 +5,7 @@ import certifi
  # Retrieve token from environment variable
  #token = input("Enter your PAT token: ")
 #url = input("Enter the API endpoint url: ")
-token = "glpat-nQgadghwKVL7KhpCNv17"
+token = "<token>"
 headers = {'PRIVATE-TOKEN': f'{token}'}
 params = {"membership": True, "per_page": 100,"statistics":True}
 response = requests.get(url = "https://gitlab.com/api/v4/projects", headers=headers,verify=False,params = params)
