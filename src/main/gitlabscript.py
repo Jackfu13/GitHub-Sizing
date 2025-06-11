@@ -5,7 +5,7 @@ import certifi
  # Retrieve token from environment variable
  #token = input("Enter your PAT token: ")
 #url = input("Enter the API endpoint url: ")
-#token = "glpat-Z6H1KV7CNvW_rakP5q3c"
+
 token = input("Please enter your Personal Access Token: ")
 url = input("Please enter the API endpoint: ")
 headers = {'PRIVATE-TOKEN': f'{token}'}
