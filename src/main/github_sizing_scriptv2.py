@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import certifi
+requests.packages.urllib3.disable_warnings()
  # Retrieve token from environment variable
 token = input("Enter your PAT token: ")
 url = input("Enter the API endpoint url: ")
